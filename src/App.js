@@ -4,6 +4,8 @@ import { Cards, Chart, CountryPicker } from './components'
 import styles from './App.module.css';
 import { fetchData } from './api';
 
+import logo from "./images/logo.png"
+
 class App extends Component {
     state = {
         data: {},
@@ -30,6 +32,7 @@ class App extends Component {
 
         return(
             <div className={styles.container}>
+                <img src={logo}/>
                 <Cards data={data}/>
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
                 <Chart data={data} country={country}/>
